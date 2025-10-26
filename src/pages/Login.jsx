@@ -16,7 +16,7 @@ const Login = () => {
     const emailInput = e.target.email.value;
     const password = e.target.password.value;
 
-    fetch("http://localhost:5000/login", {
+    fetch("https://simple-server-green.vercel.app/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: emailInput, password }),
@@ -48,7 +48,7 @@ const Login = () => {
     e.preventDefault();
     const code = e.target.code.value;
 
-    fetch("http://localhost:5000/verify-login", {
+    fetch("https://simple-server-green.vercel.app/verify-login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, code }),

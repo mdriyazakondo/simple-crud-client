@@ -10,7 +10,7 @@ const ResetPassword = () => {
   const handleReset = async (e) => {
     e.preventDefault();
 
-    const res = await fetch("http://localhost:5000/resert-pass", {
+    const res = await fetch("https://simple-server-green.vercel.app/resert-pass", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

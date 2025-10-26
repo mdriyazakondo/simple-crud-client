@@ -13,7 +13,7 @@ const Navbar = () => {
   const { user, setUser } = useContext(AuthContext);
 
   const handleLogout = () => {
-    fetch("http://localhost:5000/logout", {
+    fetch("https://simple-server-green.vercel.app/logout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

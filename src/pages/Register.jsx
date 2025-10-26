@@ -13,7 +13,7 @@ const Register = () => {
     const emailInput = e.target.email.value;
     const password = e.target.password.value;
 
-    fetch("http://localhost:5000/register", {
+    fetch("https://simple-server-green.vercel.app/register", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name, email: emailInput, password }),
@@ -40,7 +40,7 @@ const Register = () => {
     e.preventDefault();
     const code = e.target.code.value;
 
-    fetch("http://localhost:5000/verify", {
+    fetch("https://simple-server-green.vercel.app/verify", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, code }),
